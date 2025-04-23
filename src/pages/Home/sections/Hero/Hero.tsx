@@ -1,26 +1,60 @@
-import { Grid, styled } from "@mui/material";
+import { Button, Container, Grid, styled, Typography } from "@mui/material";
 import Avatar from "../../../../assets/images/avatar.jpg";
+import DownloadIcon from "@mui/icons-material/Download";
+import EmailIcon from "@mui/icons-material/Email";
 
 const Hero = () => {
   const StyleHero = styled("div")(() => ({
     backgroundColor: "black",
-    color: "white",
+    height: "100bh",
   }));
 
   const StyleImg = styled("img")(() => ({
-    width: "30%",
+    width: "100%",
     borderRadius: "50%",
   }));
 
   return (
     <>
       <StyleHero>
-        <Grid container spacing={2}>
-          <Grid size={4}>
-            <StyleImg src={Avatar} />
+        <Container>
+          <Grid container spacing={2}>
+            <Grid size={{ xs: 12, md: 4 }}>
+              <StyleImg src={Avatar} />
+            </Grid>
+            <Grid size={{ xs: 12, md: 8 }}>
+              <Typography color="primary" variant="h1" textAlign="center">
+                Kaique Devesa
+              </Typography>
+              <Typography color="primary" variant="h2" textAlign="center">
+                I'm a Software Engineer
+              </Typography>
+              <Grid container>
+                <Grid
+                  size={{ xs: 12, md: 6 }}
+                  display={"flex"}
+                  justifyContent={"center"}
+                >
+                  <Button>
+                    <DownloadIcon />
+                    Download CV
+                  </Button>
+                </Grid>
+
+                <Grid
+                  size={{ xs: 12, md: 6 }}
+                  display={"flex"}
+                  justifyContent={"center"}
+                >
+                  <Button>
+                    <EmailIcon />
+                    Contact me
+                  </Button>
+                </Grid>
+              </Grid>
+            </Grid>
           </Grid>
-          <Grid size={8}>size=4</Grid>
-        </Grid>
+        </Container>
       </StyleHero>
     </>
   );
