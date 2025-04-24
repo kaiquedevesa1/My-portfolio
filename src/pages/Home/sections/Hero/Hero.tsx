@@ -17,7 +17,7 @@ const Hero = () => {
   return (
     <>
       <StyleHero>
-        <Container>
+        <Container maxWidth="lg">
           <Grid container spacing={2}>
             <Grid size={{ xs: 12, md: 4 }}>
               <StyleImg src={Avatar} />
@@ -29,9 +29,9 @@ const Hero = () => {
               <Typography color="primary" variant="h2" textAlign="center">
                 I'm a Software Engineer
               </Typography>
-              <Grid container>
+              <Grid container display="flex" justifyContent="center">
                 <Grid
-                  size={{ xs: 12, md: 6 }}
+                  size={{ xs: 12, md: 4 }}
                   display={"flex"}
                   justifyContent={"center"}
                 >
