@@ -1,7 +1,7 @@
 import { AppBar, MenuItem, styled, Toolbar } from "@mui/material";
 
 const NavBar = () => {
-  const StyleToobar = styled(Toolbar)(({ theme }) => ({
+  const StyleToobar = styled(Toolbar)(() => ({
     display: "flex",
     justifyContent: "space-evenly",
   }));
@@ -9,7 +9,7 @@ const NavBar = () => {
     <>
       <AppBar position="absolute">
         <StyleToobar>
-          <MenuItem>Abaut</MenuItem>
+          <MenuItem>About</MenuItem>
           <MenuItem>Skills</MenuItem>
           <MenuItem>Project</MenuItem>
         </StyleToobar>

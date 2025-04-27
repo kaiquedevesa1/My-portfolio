@@ -11,10 +11,18 @@ const Hero = () => {
     height: "100vh",
     display: "flex",
     alignItems: "center",
+    [theme.breakpoints.up("xs")]: {
+      // <= mobile
+      paddingTop: "100px",
+    },
+    [theme.breakpoints.up("md")]: {
+      // >=mobile
+      paddingTop: "0",
+    },
   }));
 
   const StyleImg = styled("img")(({ theme }) => ({
-    width: "80%",
+    width: "75%",
     borderRadius: "50%",
     border: `1px solid ${theme.palette.primary.contrastText}`,
   }));
@@ -39,6 +47,7 @@ const Hero = () => {
                 color="primary.contrastText"
                 variant="h1"
                 textAlign="center"
+                pb={2}
               >
                 Kaique Devesa
               </Typography>
@@ -54,6 +63,7 @@ const Hero = () => {
                 display="flex"
                 justifyContent="center"
                 spacing={3}
+                pt={3}
               >
                 <Grid
                   size={{ xs: 12, md: 4 }}
